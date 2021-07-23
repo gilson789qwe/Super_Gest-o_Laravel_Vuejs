@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@extends('site.layouts.basico')
 
-<head>
-    <title>Super Gestão - Contato</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ asset('css/estilo_basico.css') }}">
-</head>
+@section('titulo', 'Contato')
 
-<body>
+@section('conteudo')
     <div class="topo">
 
         <div class="logo">
@@ -16,7 +11,7 @@
 
         <div class="menu">
             <ul>
-                <li><a href="{{ route('site.index') }}">Principal</a></li>
+                <li><a href="{{ route('site.index') }}">Home</a></li>
                 <li><a href="{{ route('site.sobrenos') }}">Sobre Nós</a></li>
                 <li><a href="{{ route('site.contato') }}">Contato</a></li>
             </ul>
@@ -70,6 +65,4 @@
             <img src="{{ asset('img/mapa.png') }}">
         </div>
     </div>
-</body>
-
-</html>
+@endsection
