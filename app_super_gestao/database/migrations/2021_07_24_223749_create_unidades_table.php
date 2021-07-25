@@ -20,7 +20,6 @@ class CreateUnidadesTable extends Migration
             $table->timestamps();
 
             //adicionar o relacionamento com a tabela produtos
-            /** */
             
         });
         Schema::table('produtos', function(Blueprint $table) {
@@ -41,9 +40,9 @@ class CreateUnidadesTable extends Migration
      */
     public function down()
     {   
+        /** */
         //remover o relacionamento com a tabela produtos
         Schema::table('produtos', function(Blueprint $table) {
-            // remover a foreign_key
            $table->dropForeign('produtos_unidade_id_foreign'); //[table]_[coluna]_foreign
             //remover a coluna unidade_id
            $table->dropColumn('unidade_id');
